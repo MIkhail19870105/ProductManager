@@ -17,7 +17,7 @@ class ProductManagerTest {
     Product product3 = new Book(3, "Чапаев и Пустота", 1500, "Виктор Пелевин");
     Product product4 = new Book(4, "Бэтман Аполло", 700, "Виктор Пелевин");
     Product product5 = new Book(5, "Ананасная вода для прекрасной дамы", 265, "Виктор Пелевин");
-    Product product11 = new Book(11, "Generation P", 750, "Виктор Пелевин");
+    Product product11 = new Book(6, "Generation P", 750, "Виктор Пелевин");
 
     Product product6 = new Smartphone(1, "Redmi 5Plus", 12990, "Redmi");
     Product product7 = new Smartphone(2, "Xiaomi Mi8T", 16990, "Xiaomi");
@@ -71,7 +71,7 @@ class ProductManagerTest {
                 new Book(3, "Чапаев и Пустота", 1500, "Виктор Пелевин"),
                 new Book(4, "Бэтман Аполло", 700, "Виктор Пелевин"),
                 new Book(5, "Ананасная вода для прекрасной дамы", 265, "Виктор Пелевин"),
-                new Book(11, "Generation P", 750, "Виктор Пелевин")};
+                new Book(6, "Generation P", 750, "Виктор Пелевин")};
         assertArrayEquals(expected,actual);
     }
 

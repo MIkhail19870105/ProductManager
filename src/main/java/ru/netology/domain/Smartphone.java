@@ -36,4 +36,11 @@ public class Smartphone extends Product {
     public int hashCode() {
         return Objects.hash(super.hashCode(), brand);
     }
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "brand='" + brand + '\'' +
+                '}';
+    }
 }

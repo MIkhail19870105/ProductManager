@@ -36,4 +36,11 @@ public class Book extends Product {
     public int hashCode() {
         return Objects.hash(super.hashCode(), author);
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                '}';
+    }
 }
