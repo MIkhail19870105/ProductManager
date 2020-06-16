@@ -6,9 +6,7 @@ public class Smartphone extends Product {
 
     private String brand;
 
-    public Smartphone() {
-        super();
-    }
+
 
     public Smartphone(int id, String name, int price, String brand) {
         super(id, name, price);
@@ -19,9 +17,7 @@ public class Smartphone extends Product {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -42,5 +38,10 @@ public class Smartphone extends Product {
         return "Smartphone{" +
                 "brand='" + brand + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean matches(String search) {
+        return super.matches(search) || this.getBrand().matches(search);
     }
 }
