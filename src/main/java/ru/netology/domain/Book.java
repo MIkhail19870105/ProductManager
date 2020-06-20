@@ -1,7 +1,13 @@
 package ru.netology.domain;
 
-import java.util.Objects;
-
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class Book extends Product {
 
     private String author;
@@ -18,28 +24,7 @@ public class Book extends Product {
 
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Book book = (Book) o;
-        return author.equals(book.author);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), author);
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "author='" + author + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean matches(String search) {
-        return super.matches(search) || this.getAuthor().matches(search);
+        return super.matches(search) || author.equalsIgnoreCase(search);
     }
 }
